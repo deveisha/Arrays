@@ -1,7 +1,4 @@
 #include<iostream>
-#include<time.h>
-#include<stdlib.h>
-
 using namespace std;
 
 int sumArray(int[],int);
@@ -14,27 +11,23 @@ int main()
  int a[100],n,i,sum, min, max, avg;
  cout<<"Enter Size of Array (Max. 100): ";
  cin>>n;
- 
- //Random Input
- srand((unsigned)time(NULL));
- cout<<"\nThe values of array are:\n";
+ cout<<"The values of array are:";
  for(i=0;i<n;i++)
  {
-  a[i]=(rand()%90)+10;
   cout<<"Value-"<<i+1<<" : "<<a[i]<<endl;
  }
 
  sum=sumArray(a,n);
- cout<<"Sum     : "<<sum<<endl;
+ cout<<"Sum: "<<sum<<endl;
 
  avg=avgArray(a,n);
- cout<<"Average : "<<avg<<endl;
+ cout<<"Average: "<<avg<<endl;
 
  min=minArray(a,n);
- cout<<"Minimum : "<<min<<endl;
+ cout<<"Minimum: "<<min<<endl;
 
  max=maxArray(a,n);
- cout<<"Maximum : "<<max<<endl;
+ cout<<"Maximum: "<<max<<endl;
 }
 
 int sumArray(int ar[],int n)
